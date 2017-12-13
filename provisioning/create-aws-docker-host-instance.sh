@@ -4,14 +4,14 @@ set -e
 echo "Check for instance information..."
 INSTANCE_DIR=~/aws
 
-export AMI_IMAGE_ID="ami-1a962263"
+export AMI_IMAGE_ID="ami-15e9c770"
 
 echo No instance information present, continuing.
 [ -d ${INSTANCE_DIR} ] || mkdir ${INSTANCE_DIR}
 
 USERNAME=$(aws iam get-user --query 'User.UserName' --output text)
 
-SECURITY_GROUP_NAME=hgop-${USERNAME}
+SECURITY_GROUP_NAME=launch-wizard-1
 
 echo "Using security group name ${SECURITY_GROUP_NAME}"
 
