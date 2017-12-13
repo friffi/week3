@@ -45,8 +45,9 @@ cp ./Dockerfile ./build/
 cd build
 
 echo Building docker image
+echo $GIT_COMMIT
 
-docker build -t fidthjofur12/tic_tac_toe:$GIT_COMMIT .
+docker build -t fridthjofur12/tic_tac_toe:$GIT_COMMIT .
 
 rc=$?
 if [[ $rc != 0 ]] ; then
