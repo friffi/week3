@@ -14,6 +14,7 @@ node {
     }
     stage('Test') {
         sh 'npm run test:nowatch'
+        sh 'npm run apitestCI'
     }
     stage('Deploy') {
         sh './dockerbuild.sh'
